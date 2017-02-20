@@ -25,6 +25,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EmN-mB-b9D">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="a9K-iO-I4w">
+                                    <rect key="frame" x="0.0" y="131" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="103" id="YXQ-N7-6Fp" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="103"/>
@@ -66,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-F3-utE">
-                                                    <rect key="frame" x="88" y="53" width="216" height="14"/>
+                                                    <rect key="frame" x="88" y="53" width="145" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -90,7 +95,6 @@
                                                 <constraint firstItem="sFT-nA-hKi" firstAttribute="leading" secondItem="geU-bN-R0x" secondAttribute="trailing" constant="8" id="33g-ox-PwD"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="geU-bN-R0x" secondAttribute="bottom" constant="12" id="47N-AB-ssk"/>
                                                 <constraint firstItem="sFT-nA-hKi" firstAttribute="top" secondItem="1Dq-pl-kP3" secondAttribute="top" constant="8" id="513-Ng-KBi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="g9e-F3-utE" secondAttribute="trailing" constant="8" id="6rE-TW-KE7"/>
                                                 <constraint firstItem="geU-bN-R0x" firstAttribute="top" secondItem="1Dq-pl-kP3" secondAttribute="top" constant="7" id="7Tm-HT-Vqp"/>
                                                 <constraint firstItem="zSh-DT-Axb" firstAttribute="leading" secondItem="SgK-y4-2l2" secondAttribute="trailing" constant="8" id="9dA-uq-F2q"/>
                                                 <constraint firstItem="g9e-F3-utE" firstAttribute="leading" secondItem="geU-bN-R0x" secondAttribute="trailing" constant="8" id="DOc-ui-rUk"/>
@@ -135,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Yelp" id="djE-rB-qe3"/>
                     <connections>
+                        <outlet property="searchBar" destination="a9K-iO-I4w" id="swB-eh-cCj"/>
                         <outlet property="tableView" destination="EmN-mB-b9D" id="YbO-Aw-uEq"/>
                     </connections>
                 </viewController>
